@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tebak Nama Member</title>
+  <style>
+    #clue {
+      font-weight: bold;
+    }
+    body{
+        background:url(jkt48.jpg)no-repeat center fixed;
+    }
+  </style>
+</head>
+<body>
+    <center>
+  <h1>Clue Dibawah :3</h1>
+  <p id="clue"></p>
+  <label for="tebakan">Tebak kata:</label>
+  <input type="text" id="tebakan">
+  <button onclick="tebakKata()">Submit</button><br><br>
+  <button><a href="index.html">Back Pages</a></button>
+
+  <script>
+    var kataKunci = "desy natalia"; 
+    var clue = "d___ n______a"; 
+
+    function updateClue() {
+      document.getElementById("clue").textContent = clue;
+    }
+
+    function tebakKata() {
+      var tebakan = document.getElementById("tebakan").value.toLowerCase();
+
+      if (tebakan === kataKunci) {
+        alert("Congratulation!");
+      } else {
+        alert("Tebakanmu salah. Coba lagi!");
+      }
+    }
+
+    updateClue(); 
+  </script>
+  </center>
+</body>
+</html>
